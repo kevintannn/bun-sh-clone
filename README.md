@@ -1,4 +1,4 @@
-![alt text](https://github.com/kevintannn/bun-sh-clone/blob/master/src/assets/bun-sh-clone.png?raw=true)
+![alt text](https://raw.githubusercontent.com/kevintannn/bun-sh-clone/master/src/assets/bun-sh-clone.png)
 
 # React + TypeScript + Vite
 
