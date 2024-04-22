@@ -45,9 +45,9 @@ const Hero = () => {
   const [activeGraphTab, setActiveGraphTab] = useState("bun-serve");
 
   return (
-    <div className="flex items-center justify-between py-24">
+    <div className="flex flex-col py-24 md:flex-row md:items-center md:justify-between">
       {/* LEFT */}
-      <div className="flex w-[55%] flex-col gap-8">
+      <div className="mb-24 flex flex-col gap-8 px-6 md:mb-0 md:w-[55%] md:px-0">
         {/* PILL and HEADER */}
         <div className="space-y-3">
           {/* PILL */}
@@ -59,7 +59,7 @@ const Hero = () => {
           </a>
 
           {/* HEADER */}
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-4xl font-bold md:text-6xl">
             Bun is a fast JavaScript package manager
           </h1>
         </div>
@@ -73,7 +73,7 @@ const Hero = () => {
         </p>
 
         {/* INSTALL BUN */}
-        <div className="flex flex-col gap-3">
+        <div className="hidden flex-col gap-3 md:flex">
           {/* HEADER */}
           <h1 className="text-xl font-semibold">Install Bun v1.1.3</h1>
 
@@ -110,11 +110,11 @@ const Hero = () => {
       {/* RIGHT */}
       <div className="flex flex-col items-center justify-end gap-5">
         {/* TAB */}
-        <div className="flex cursor-pointer items-center">
+        <div className="flex w-full cursor-pointer items-center md:w-fit">
           {graphTabs.map((item, idx) => (
             <div
               key={idx}
-              className={`${activeGraphTab === item.slug ? "rounded-tl-lg rounded-tr-lg border-b-gray-300 bg-gray-700/60" : "border-b-gray-800"} flex w-[130px] items-center justify-center border-b-[3px] p-5 hover:rounded-tl-lg hover:rounded-tr-lg hover:border-b-gray-300 hover:bg-gray-700/60`}
+              className={`${activeGraphTab === item.slug ? "rounded-tl-lg rounded-tr-lg border-b-gray-300 bg-gray-700/60" : "border-b-gray-800"} flex w-full items-center justify-center border-b-[3px] p-5 hover:rounded-tl-lg hover:rounded-tr-lg hover:border-b-gray-300 hover:bg-gray-700/60 md:w-[130px]`}
               onClick={() => setActiveGraphTab(item.slug)}
             >
               {item.title}
@@ -123,7 +123,7 @@ const Hero = () => {
         </div>
 
         {/* HEADER & DESCRIPTION */}
-        <div className=" flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <h1 className="text-2xl font-semibold">
             {graphTabs.find((item) => item.slug === activeGraphTab)?.header}
           </h1>

@@ -14,6 +14,8 @@ export default {
         cardbghover: "#201525",
         cardborderhover: "#831843",
         darkpill: "#1c1d20",
+        secondpill: "#14151a",
+        secondpillhover: "#282a36",
         // pill: bg-gray-700/60
         // pillhover: bg-gray-700
         // darkpillborder: border-b border-b-gray-700
