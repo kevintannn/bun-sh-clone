@@ -1,3 +1,9 @@
+![alt text](https://raw.githubusercontent.com/kevintannn/bun-sh-clone/master/src/assets/bun-sh-clone.png)
+
+# I use Bun as my package manager
+
+First time trying Bun and it has been an amazing experience.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
