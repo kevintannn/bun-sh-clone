@@ -1,5 +1,4 @@
-import HTMLReactParser, { domToReact } from "html-react-parser";
-import { ReactElement, useEffect, useState } from "react";
+import HTMLReactParser from "html-react-parser";
 import PillSpan from "./PillSpan";
 
 type Props = {
@@ -16,7 +15,7 @@ const Card = ({ header, body, link }: Props) => {
     <div
       className={`${link === null ? "" : "cursor-pointer"} mb-3 flex select-none break-inside-avoid-column flex-col gap-3 rounded-lg border border-cardborder p-5 text-gray-400 hover:border-cardborderhover hover:bg-cardbghover hover:text-white`}
     >
-      <div className="text-2xl font-medium">
+      <div className="text-xl font-medium">
         {headerSplitted.map((item) => (
           <>
             {HTMLReactParser(item, {
