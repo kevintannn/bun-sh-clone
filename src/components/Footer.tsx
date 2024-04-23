@@ -44,12 +44,12 @@ const Footer = () => {
   return (
     <div className="mx-auto flex flex-col items-center justify-center gap-20 py-16 md:max-w-screen-lg">
       <div className="flex w-2/3 justify-between md:w-full">
-        {stateFooterLinks.map((item) => (
-          <FooterColumn label={item.label} links={item.links} />
+        {stateFooterLinks.map((item, idx) => (
+          <FooterColumn key={idx} label={item.label} links={item.links} />
         ))}
       </div>
 
-      <div className="text-center">
+      <div className="px-5 text-center">
         <p className="text-gray-500">
           Steamed with ❤️ in Kisaran, Sumatra Utara, Indonesia
         </p>
@@ -79,8 +79,12 @@ const FooterColumn = ({ label, links }: FooterColumnProps) => {
       <p className="text-sm font-medium text-gray-600">{label}</p>
 
       <div className="flex flex-col gap-1">
-        {links.map((item) => (
-          <a href={item.link ?? "#"} className="text-lg text-gray-400 ">
+        {links.map((item, idx) => (
+          <a
+            key={idx}
+            href={item.link ?? "#"}
+            className="text-lg text-gray-400 "
+          >
             {item.label}
           </a>
         ))}

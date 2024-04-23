@@ -22,19 +22,18 @@ const NumberCodeBlock = ({ number, title, code }: Props) => {
         showLineNumbers={false}
         theme={dracula}
         codeContainerStyle={{
-          fontFamily: "consolas, sans-serif",
+          fontFamily: "Consolas, monaco, monospace",
+          fontSize: "15px",
+        }}
+        customStyle={{
           paddingLeft: "20px",
           paddingRight: "20px",
           paddingTop: "13px",
           paddingBottom: "13px",
-          width: `${window.innerWidth <= 768 ? "400px" : "550px"}`,
-          fontSize: "15px",
-          border: "2px solid rgb(55,65,81)",
-          borderRadius: "5px",
-        }}
-        customStyle={{
           borderRadius: "5px",
           marginTop: "37px",
+          border: "2px solid rgb(55,65,81)",
+          width: `${window.innerWidth <= 768 ? "350px" : "550px"}`,
         }}
       />
     </div>

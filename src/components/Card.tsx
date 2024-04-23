@@ -16,7 +16,7 @@ const Card = ({ header, body, link }: Props) => {
       className={`${link === null ? "" : "cursor-pointer"} mb-3 flex select-none break-inside-avoid-column flex-col gap-3 rounded-lg border border-cardborder p-5 text-gray-400 hover:border-cardborderhover hover:bg-cardbghover hover:text-white`}
     >
       <div className="text-xl font-medium">
-        {headerSplitted.map((item) => (
+        {headerSplitted.map((item, idx) => (
           <>
             {HTMLReactParser(item, {
               replace: (domNode) => {
@@ -25,6 +25,7 @@ const Card = ({ header, body, link }: Props) => {
 
                   return (
                     <PillSpan
+                      key={idx}
                       word={word ?? ""}
                       color={color === "darker" ? "darker" : null}
                       size={size === "small" ? "small" : null}
@@ -41,7 +42,7 @@ const Card = ({ header, body, link }: Props) => {
       </div>
 
       <div className="text-lg">
-        {bodySplitted.map((item) => (
+        {bodySplitted.map((item, idx) => (
           <>
             {HTMLReactParser(item, {
               replace: (domNode) => {
@@ -50,6 +51,7 @@ const Card = ({ header, body, link }: Props) => {
 
                   return (
                     <PillSpan
+                      key={idx}
                       word={word ?? ""}
                       color={color === "darker" ? "darker" : null}
                       size={size === "small" ? "small" : null}
