@@ -77,8 +77,9 @@ const BunInstall = () => {
 
       {/* PROGRESS BARS */}
       <div className="mb-7 flex flex-col gap-1">
-        {progressBars.map((item) => (
+        {progressBars.map((item, idx) => (
           <ProgressBar
+            key={idx}
             label={item.label}
             percentage={item.percentage}
             time={item.time}
@@ -111,7 +112,7 @@ const BunInstall = () => {
       </div>
 
       <div className="flex items-center justify-center gap-5 px-5 md:px-0">
-        <p className="text-lg">
+        <p className="text-base md:text-lg">
           Replace <PillSpan word="yarn" color="darker" fontsize={"none"} /> with{" "}
           <PillSpan word="bun install" color="darker" fontsize={"none"} /> to
           get 30x faster package install.

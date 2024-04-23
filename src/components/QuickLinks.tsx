@@ -16,10 +16,11 @@ const QuickLinks = ({ label, links }: Props) => {
       </p>
 
       <div className="flex flex-col gap-0.5">
-        {links.map((item) => (
+        {links.map((item, idx) => (
           <a
+            key={idx}
             href={item.url ?? "#"}
-            className="text-lg text-gray-400 hover:underline w-fit"
+            className="w-fit text-lg text-gray-400 hover:underline"
           >
             {item.label}
           </a>

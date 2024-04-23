@@ -22,21 +22,21 @@ const graphTabs = [
     slug: "bun-serve",
     header: "Server-side rendering React",
     body: "HTTP requests per second (Linux x64)",
-    img: BunServeImg,
+    img: "." + BunServeImg,
   },
   {
     title: "WebSocket",
     slug: "websocket",
     header: "WebSocket chat server",
     body: "Messages sent per second (Linux x64, 32 clients)",
-    img: WebSocketImg,
+    img: "." + WebSocketImg,
   },
   {
     title: "bun:sqlite",
     slug: "bun-sqlite",
     header: "Load a huge table",
     body: "Average queries per second",
-    img: BunSqliteImg,
+    img: "." + BunSqliteImg,
   },
 ];
 

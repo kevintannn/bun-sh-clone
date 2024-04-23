@@ -161,15 +161,20 @@ const LearnByExample = () => {
 
       {/* CARDS */}
       <div className="mb-16 grid max-w-screen-xl grid-cols-1 gap-5 px-5 lg:grid-cols-3">
-        {cardsContent.map((item) => (
-          <ViewGuideCard tag={item.tag} header={item.header} link={item.link} />
+        {cardsContent.map((item, idx) => (
+          <ViewGuideCard
+            key={idx}
+            tag={item.tag}
+            header={item.header}
+            link={item.link}
+          />
         ))}
       </div>
 
       {/* LINKS */}
       <div className="w-full max-w-screen-xl gap-5 px-5 sm:columns-1 md:columns-2 lg:columns-3">
-        {quickLinks.map((item) => (
-          <QuickLinks label={item.label} links={item.links} />
+        {quickLinks.map((item, idx) => (
+          <QuickLinks key={idx} label={item.label} links={item.links} />
         ))}
       </div>
     </div>

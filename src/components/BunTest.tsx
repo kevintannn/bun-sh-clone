@@ -91,7 +91,7 @@ const BunTest = () => {
         {progressBars.map((item, idx) => (
           <ProgressBar
             key={idx}
-            width={window.innerWidth <= 768 ? "70px" : "120px"}
+            width={window.innerWidth <= 768 ? "80px" : "120px"}
             label={item.label}
             percentage={item.percentage}
             time={item.time}
@@ -127,7 +127,7 @@ const BunTest = () => {
       </div>
 
       <div className="flex items-center justify-center gap-5 px-5 md:px-0">
-        <p className="text-lg">
+        <p className="text-base md:text-lg">
           Replace <PillSpan word="jest" color="darker" fontsize={"none"} /> with{" "}
           <PillSpan word="bun test" color="darker" fontsize={"none"} /> to get
           10-30x faster package install.

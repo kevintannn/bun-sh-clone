@@ -265,17 +265,19 @@ const BunRun = () => {
           ))}
         </div>
 
-        <div className="overflow-x-hidden">
+        <div className="px-5">
           <CodeBlock
             text={bunFunctions[clickedPillIdx].code}
             language={"typescript"}
             showLineNumbers={false}
             theme={dracula}
             codeContainerStyle={{
-              fontFamily: "consolas, sans-serif",
-              padding: "20px",
-              width: `${window.innerWidth <= 768 ? "400px" : "700px"}`,
+              fontFamily: "Consolas, monaco, monospace",
               fontSize: "13px",
+            }}
+            customStyle={{
+              padding: "20px",
+              width: `${window.innerWidth <= 768 ? "350px" : "700px"}`,
             }}
           />
         </div>

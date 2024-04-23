@@ -1,5 +1,5 @@
 type Props = {
-  width?: string;
+  width?: string | null;
   label: string;
   percentage: string;
   time: string;
@@ -16,9 +16,9 @@ const ProgressBar = ({
   highlighted,
 }: Props) => {
   return (
-    <div className="flex items-center justify-between gap-5">
+    <div className="flex items-center justify-between gap-2 md:gap-5">
       <p
-        className="text-lg font-light text-gray-300"
+        className="text-base font-light text-gray-300 md:text-lg"
         style={{
           width: width ? width : "50px",
         }}
@@ -26,12 +26,14 @@ const ProgressBar = ({
         {label}
       </p>
 
-      <div className="relative h-5 w-[250px] rounded-sm md:w-[450px]">
+      <div className="relative h-5 w-[240px] rounded-sm md:w-[450px]">
         <div
           className={`absolute left-0 flex h-5 items-center rounded-sm ${highlighted ? "bg-gray-400" : "bg-gray-700"}`}
           style={{ width: `calc(${percentage})` }}
         >
-          <p className="ml-2 text-sm italic text-gray-400">{description}</p>
+          <p className="ml-2 text-xs italic text-gray-400 md:text-sm">
+            {description}
+          </p>
         </div>
       </div>
 
